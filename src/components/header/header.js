@@ -1,6 +1,10 @@
+import './header.css'
+
 function Header() {
   return (
-    <p>Header</p>
+    <div id="header-container">
+      <p id="header-name">CatHack</p>
+    </div>
   );
 }
 
