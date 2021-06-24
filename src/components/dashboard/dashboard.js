@@ -3,6 +3,7 @@ import {
   HighchartsStockChart, Chart, withHighcharts, XAxis, YAxis, Title, Legend,
   LineSeries, Navigator, RangeSelector, Tooltip
 } from 'react-jsx-highstock';
+import './dashboard.css'
 
 const data = [[1220832000000, 22.56], [1220918400000, 21.67], [1221004800000, 21.66], [1221091200000, 21.81], [1221177600000, 21.28], [1221436800000, 20.05], [1221523200000, 19.98], 
                 [1221609600000, 18.26], [1221696000000, 19.16], [1221782400000, 20.13], [1222041600000, 18.72], [1222128000000, 18.12], [1222214400000, 18.39], [1222300800000, 18.85], 
@@ -17,39 +18,40 @@ const data = [[1220832000000, 22.56], [1220918400000, 21.67], [1221004800000, 21
 
 function Dashboard() {
   return (
-    <HighchartsStockChart>
-      <Chart zoomType="x" />
+    <div id="dashboard-container">
+      <HighchartsStockChart>
+        <Chart zoomType="x" />
 
-      <Title>Highstocks Example</Title>
+        <Title>Highstocks Example</Title>
 
-      <Legend>
-        <Legend.Title>Key</Legend.Title>
-      </Legend>
+        <Legend>
+          <Legend.Title>Key</Legend.Title>
+        </Legend>
 
-      <Tooltip />
+        <Tooltip />
 
-      <XAxis>
-        <XAxis.Title>Time</XAxis.Title>
-      </XAxis>
+        <XAxis>
+          <XAxis.Title>Time</XAxis.Title>
+        </XAxis>
 
-      <YAxis>
-        <YAxis.Title>Price</YAxis.Title>
-        <LineSeries id="profit" name="Profit" data={data} />
-      </YAxis>
+        <YAxis>
+          <YAxis.Title>Price</YAxis.Title>
+          <LineSeries id="profit" name="Profit" data={data} />
+        </YAxis>
 
-      <RangeSelector selected={1}>
-        <RangeSelector.Button count={1} type="day">1d</RangeSelector.Button>
-        <RangeSelector.Button count={7} type="day">7d</RangeSelector.Button>
-        <RangeSelector.Button count={1} type="month">1m</RangeSelector.Button>
-        <RangeSelector.Button type="all">All</RangeSelector.Button>
-        <RangeSelector.Input boxBorderColor=""/>
-      </RangeSelector>
+        <RangeSelector selected={1}>
+          <RangeSelector.Button count={1} type="day">1d</RangeSelector.Button>
+          <RangeSelector.Button count={7} type="day">7d</RangeSelector.Button>
+          <RangeSelector.Button count={1} type="month">1m</RangeSelector.Button>
+          <RangeSelector.Button type="all">All</RangeSelector.Button>
+          <RangeSelector.Input boxBorderColor="" />
+        </RangeSelector>
 
-      <Navigator>
-        <Navigator.Series seriesId="profit" />
-      </Navigator>
-    </HighchartsStockChart>
-
+        <Navigator>
+          <Navigator.Series seriesId="profit" />
+        </Navigator>
+      </HighchartsStockChart>
+    </div>
   );
 }
 
