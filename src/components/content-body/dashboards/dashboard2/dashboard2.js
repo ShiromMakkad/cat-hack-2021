@@ -7,6 +7,7 @@ import {
 import '../dashboard.css'
 
 import ev_sales from '../../../../assets/ev_sales.json'
+import ev_sales_prediction from '../../../../assets/ev_sales_prediction.json'
 
 function Dashboard2() {
   return (
@@ -29,6 +30,7 @@ function Dashboard2() {
         <YAxis>
           <YAxis.Title>EV Sales</YAxis.Title>
           <LineSeries id="ev_sales" name="EV Sales" data={ev_sales} />
+          <LineSeries id="ev_sales" name="EV Sales Predictions" data={ev_sales_prediction} />
         </YAxis>
 
         <RangeSelector selected={4}>
