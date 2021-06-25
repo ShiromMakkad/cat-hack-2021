@@ -12,6 +12,7 @@ import cobalt_prices from '../../../../assets/cobalt_prices.json'
 import cobalt_prediction from '../../../../assets/cobalt_prediction.json'
 import lithium_prices from '../../../../assets/lithium_prices.json'
 import lithium_prediction from '../../../../assets/lithium_prediction.json'
+import lithium_capacity from '../../../../assets/lithium_capacity.json'
 
 function Dashboard2() {
   return (
@@ -35,6 +36,11 @@ function Dashboard2() {
           <YAxis.Title>Price</YAxis.Title>
           <LineSeries id="ev_sales" name="EV Sales" data={ev_sales} />
           <LineSeries id="ev_sales_predictions" name="EV Sales Predictions" data={ev_sales_prediction} />
+        </YAxis>
+
+        <YAxis>
+          <YAxis.Title>Capacity</YAxis.Title>
+          <LineSeries id="lithium_capacity" name="Lithium Capacity" data={lithium_capacity} />
         </YAxis>
 
         <RangeSelector selected={4}>
