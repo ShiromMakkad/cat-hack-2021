@@ -31,13 +31,13 @@ function Dashboard() {
         <YAxis>
           <YAxis.Title>Gas Prices</YAxis.Title>
           <LineSeries id="gas_prices" name="Gas Prices" data={gas_prices} />
-          <LineSeries id="gas_prediction" name="Gas Prediction" data={gas_prediction} />
+          <LineSeries id="gas_prediction" name="Gas Predictions" data={gas_prediction} />
         </YAxis>
 
         <YAxis>
           <YAxis.Title>Electricity Prices</YAxis.Title>
           <LineSeries id="electricity_prices" name="Electricity Prices" data={electricity_prices} />
-          <LineSeries id="electricity_prediction" name="Electricity Prediction" data={electricity_prediction} />
+          <LineSeries id="electricity_prediction" name="Electricity Predictions" data={electricity_prediction} />
         </YAxis>
 
         <RangeSelector selected={4}>

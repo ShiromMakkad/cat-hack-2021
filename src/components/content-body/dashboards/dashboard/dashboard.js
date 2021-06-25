@@ -67,9 +67,9 @@ function Dashboard2() {
         <YAxis>
           <YAxis.Title>Price</YAxis.Title>
           <LineSeries id="cobalt_prices" name="Cobalt Prices" data={cobalt_prices} />
-          <LineSeries id="cobalt_prediction" name="Cobalt Prediction" data={cobalt_prediction} />
+          <LineSeries id="cobalt_prediction" name="Cobalt Predictions" data={cobalt_prediction} />
           <LineSeries id="lithium_prices" name="Lithium Prices" data={lithium_prices} />
-          <LineSeries id="lithium_prediction" name="Lithium Prediction" data={lithium_prediction} />
+          <LineSeries id="lithium_prediction" name="Lithium Predictions" data={lithium_prediction} />
         </YAxis>
 
         <RangeSelector selected={4}>
