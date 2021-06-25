@@ -6,6 +6,19 @@
     background-color: white;
 }
 
+#navSidebar .nav-item a[aria-selected="false"] {
+    color: #222;
+}
+
+#navSidebar .nav-item a[aria-selected="true"] {
+    background: #fc0;
+}
+
+#container-div {
+    max-width: 90vw;
+}
+
+
 #nav-pills {
     margin-top: 1rem;
 }

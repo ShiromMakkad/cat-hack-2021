@@ -10,7 +10,7 @@ import Nav from 'react-bootstrap/Nav'
 
 function ContentBody() {
     return (
-        <Container>
+        <Container id="container-div">
             <Tab.Container defaultActiveKey="first">
                 <Row>
                     <Col sm={2} id="navSidebar">
