@@ -6,16 +6,20 @@ import {
 } from 'react-jsx-highstock';
 import '../dashboard.css'
 
-import electricity_prices from '../../../../assets/electricity_prices.json'
-import gas_prices from '../../../../assets/gas_prices.json'
+import ev_sales from '../../../../assets/ev_sales.json'
+import ev_sales_prediction from '../../../../assets/ev_sales_prediction.json'
+import cobalt_prices from '../../../../assets/cobalt_prices.json'
+import cobalt_prediction from '../../../../assets/cobalt_prediction.json'
+import lithium_prices from '../../../../assets/lithium_prices.json'
+import lithium_prediction from '../../../../assets/lithium_prediction.json'
 
-function Dashboard() {
+function Dashboard2() {
   return (
     <div id="dashboard-container">
       <HighchartsStockChart>
         <Chart zoomType="x" />
 
-        <Title>Gas vs Electricity Prices</Title>
+        <Title>EV Sales</Title>
 
         <Legend>
           <Legend.Title>Key</Legend.Title>
@@ -26,14 +30,19 @@ function Dashboard() {
         <XAxis>
           <XAxis.Title>Time</XAxis.Title>
         </XAxis>
+
         <YAxis>
-          <YAxis.Title>Gas Prices</YAxis.Title>
-          <LineSeries id="gas_prices" name="Gas Prices" data={gas_prices} />
+          <YAxis.Title>Price (EV Scale)</YAxis.Title>
+          <LineSeries id="ev_sales" name="EV Sales" data={ev_sales} />
+          <LineSeries id="ev_sales_predictions" name="EV Sales Predictions" data={ev_sales_prediction} />
         </YAxis>
 
         <YAxis>
-          <YAxis.Title>Electricity Prices</YAxis.Title>
-          <LineSeries id="electricity_prices" name="Electricity Prices" data={electricity_prices} />
+          <YAxis.Title>Price (Lithium and Cobalt Scale)</YAxis.Title>
+          <LineSeries id="cobalt_prices" name="Cobalt Prices" data={cobalt_prices} />
+          <LineSeries id="cobalt_prices" name="Cobalt Prices" data={cobalt_prediction} />
+          <LineSeries id="lithium_prices" name="Lithium Prices" data={lithium_prices} />
+          <LineSeries id="lithium_prices" name="Lithium Prices" data={lithium_prediction} />
         </YAxis>
 
         <RangeSelector selected={4}>
@@ -45,11 +54,12 @@ function Dashboard() {
         </RangeSelector>
 
         <Navigator>
-          <Navigator.Series seriesId="profit" />
+          <Navigator.Series seriesId="ev_sales" />
+          <Navigator.Series seriesId="ev_sales_predictions" />
         </Navigator>
       </HighchartsStockChart>
     </div>
   );
 }
 
-export default withHighcharts(Dashboard, Highcharts);
+export default withHighcharts(Dashboard2, Highcharts);

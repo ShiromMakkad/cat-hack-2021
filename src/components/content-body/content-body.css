@@ -4,6 +4,8 @@
     border-radius: 5px;
     box-shadow: 0 6px 35px #9c9c9c;
     background-color: white;
+    
+    margin: 0.25rem
 }
 
 #navSidebar .nav-item a[aria-selected="false"] {
@@ -21,4 +23,5 @@
 
 #nav-pills {
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
