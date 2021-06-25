@@ -7,7 +7,9 @@ import {
 import '../dashboard.css'
 
 import electricity_prices from '../../../../assets/electricity_prices.json'
+import electricity_prediction from '../../../../assets/electricity_prediction.json'
 import gas_prices from '../../../../assets/gas_prices.json'
+import gas_prediction from '../../../../assets/gas_prediction.json'
 
 function Dashboard() {
   return (
@@ -15,7 +17,7 @@ function Dashboard() {
       <HighchartsStockChart>
         <Chart zoomType="x" />
 
-        <Title>Gas vs Electricity Prices</Title>
+        <Title>Gas and Electricity Prices</Title>
 
         <Legend>
           <Legend.Title>Key</Legend.Title>
@@ -29,11 +31,13 @@ function Dashboard() {
         <YAxis>
           <YAxis.Title>Gas Prices</YAxis.Title>
           <LineSeries id="gas_prices" name="Gas Prices" data={gas_prices} />
+          <LineSeries id="gas_prediction" name="Gas Prediction" data={gas_prediction} />
         </YAxis>
 
         <YAxis>
           <YAxis.Title>Electricity Prices</YAxis.Title>
           <LineSeries id="electricity_prices" name="Electricity Prices" data={electricity_prices} />
+          <LineSeries id="electricity_prediction" name="Electricity Prediction" data={electricity_prediction} />
         </YAxis>
 
         <RangeSelector selected={4}>
@@ -45,7 +49,8 @@ function Dashboard() {
         </RangeSelector>
 
         <Navigator>
-          <Navigator.Series seriesId="profit" />
+          <Navigator.Series seriesId="gas_prices" />
+          <Navigator.Series seriesId="gas_prediction" />
         </Navigator>
       </HighchartsStockChart>
     </div>
