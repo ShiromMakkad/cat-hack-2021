@@ -16,10 +16,10 @@ function ContentBody() {
                     <Col sm={2} id="navSidebar">
                         <Nav variant="pills" className="flex-column" id="nav-pills">
                             <Nav.Item>
-                                <Nav.Link eventKey="first">Power Prices</Nav.Link>
+                                <Nav.Link eventKey="first">EV Sales</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="second">EV Sales</Nav.Link>
+                                <Nav.Link eventKey="second">Power Prices</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Col>

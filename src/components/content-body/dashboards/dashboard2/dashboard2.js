@@ -6,16 +6,16 @@ import {
 } from 'react-jsx-highstock';
 import '../dashboard.css'
 
-import ev_sales from '../../../../assets/ev_sales.json'
-import ev_sales_prediction from '../../../../assets/ev_sales_prediction.json'
+import electricity_prices from '../../../../assets/electricity_prices.json'
+import gas_prices from '../../../../assets/gas_prices.json'
 
-function Dashboard2() {
+function Dashboard() {
   return (
     <div id="dashboard-container">
       <HighchartsStockChart>
         <Chart zoomType="x" />
 
-        <Title>EV Sales</Title>
+        <Title>Gas vs Electricity Prices</Title>
 
         <Legend>
           <Legend.Title>Key</Legend.Title>
@@ -26,11 +26,14 @@ function Dashboard2() {
         <XAxis>
           <XAxis.Title>Time</XAxis.Title>
         </XAxis>
+        <YAxis>
+          <YAxis.Title>Gas Prices</YAxis.Title>
+          <LineSeries id="gas_prices" name="Gas Prices" data={gas_prices} />
+        </YAxis>
 
         <YAxis>
-          <YAxis.Title>EV Sales</YAxis.Title>
-          <LineSeries id="ev_sales" name="EV Sales" data={ev_sales} />
-          <LineSeries id="ev_sales" name="EV Sales Predictions" data={ev_sales_prediction} />
+          <YAxis.Title>Electricity Prices</YAxis.Title>
+          <LineSeries id="electricity_prices" name="Electricity Prices" data={electricity_prices} />
         </YAxis>
 
         <RangeSelector selected={4}>
@@ -49,4 +52,4 @@ function Dashboard2() {
   );
 }
 
-export default withHighcharts(Dashboard2, Highcharts);
+export default withHighcharts(Dashboard, Highcharts);
