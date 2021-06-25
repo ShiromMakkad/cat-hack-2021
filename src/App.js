@@ -5,10 +5,16 @@ import DropDown from './components/drop-down/drop-down';
 
 function App() {
   return (
-    <div id="app-container">
-      <ContentBody />
-      <p></p>
+    <div>
+      <div id="dropdown">
+        <DropDown />
+      </div>
+      <div id="app-container">
+        <ContentBody />
+        <p></p>
+      </div>
     </div>
+
   );
 }
 

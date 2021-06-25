@@ -6,7 +6,9 @@ function Header() {
   return (
     <div id="header-container">
       <p id="header-name">CatHack</p>
-      <DropDownComp id="dropdown" />
+      <div class="pull-right">
+        <DropDownComp id="dropdown" />
+      </div>
     </div>
   );
 }
