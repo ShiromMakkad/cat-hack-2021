@@ -36,7 +36,7 @@ function Dashboard() {
           <LineSeries id="electricity_prices" name="Electricity Prices" data={electricity_prices} />
         </YAxis>
 
-        <RangeSelector selected={1}>
+        <RangeSelector selected={4}>
           <RangeSelector.Button count={1} type="day">1d</RangeSelector.Button>
           <RangeSelector.Button count={7} type="day">7d</RangeSelector.Button>
           <RangeSelector.Button count={1} type="month">1m</RangeSelector.Button>
