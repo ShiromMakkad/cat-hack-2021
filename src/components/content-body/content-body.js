@@ -1,4 +1,7 @@
+import './content-body.css'
 import Dashboard from '../dashboard/dashboard'
+import Dashboard2 from '../dashboard2/dashboard2'
+import Dashboard3 from '../dashboard3/dashboard3'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -11,7 +14,7 @@ function ContentBody() {
     <Container>
     <Tab.Container defaultActiveKey="first">
         <Row>
-            <Col sm={2}>
+            <Col sm={2} id="navSidebar">
                 <Nav variant="pills" className="flex-column">
                     <Nav.Item>
                         <Nav.Link eventKey="first">Graph 1</Nav.Link>
@@ -30,10 +33,10 @@ function ContentBody() {
                         <Dashboard />
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                        hi i am the second graph
+                        <Dashboard2 />
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                        hi i am the third graph
+                        <Dashboard3 />
                     </Tab.Pane>
                 </Tab.Content>
             </Col>

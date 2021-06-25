@@ -1,0 +1,12 @@
+#navSidebar {
+    background: #fff;
+    
+    border-radius: 5px;
+    box-shadow: 0 6px 35px #9c9c9c;
+    background-color: white;
+
+}
+
+#navSidebar div[role="tablist"] {
+
+}
