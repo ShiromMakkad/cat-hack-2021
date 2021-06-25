@@ -7,11 +7,11 @@
     
     margin: 0.25rem
 }
-
+/*
 #container-div .row {
     height: 80vh;
 }
-
+*/
 #navSidebar .nav-item a[aria-selected="false"] {
     color: #222;
 }
