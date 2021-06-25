@@ -21,3 +21,31 @@
 .highcharts-button-pressed .highcharts-button-box {
     fill:rgba(255, 205, 0, 0.3)
 }
+
+.highcharts-color-0 path[data-z-index="1"] {
+    stroke: blue;
+}
+.highcharts-color-0 path[stroke-width="2"] {
+    stroke: blue
+}
+
+.highcharts-color-1 path[data-z-index="1"] {
+    stroke: lightblue;
+}
+.highcharts-color-1 path[stroke-width="2"] {
+    stroke:lightblue 
+}
+
+.highcharts-color-2 path[data-z-index="1"] {
+    stroke: green;
+}
+.highcharts-color-2 path[stroke-width="2"] {
+    stroke:green 
+}
+
+.highcharts-color-3 path[data-z-index="1"] {
+    stroke: lightgreen;
+}
+.highcharts-color-3 path[stroke-width="2"] {
+    stroke: lightgreen
+}
