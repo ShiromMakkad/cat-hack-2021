@@ -1,14 +1,20 @@
 #header-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
 }
 #header-name {
-    text-align: center;
-    color: black;
-    font-size: 22px;
-    font-weight: bold;
+  text-align: center;
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+}
+#dropdown {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin-right: -50%;
 }
