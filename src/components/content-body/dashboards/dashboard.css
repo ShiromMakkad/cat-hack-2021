@@ -9,3 +9,15 @@
 
     margin: 0.25rem;
 }
+
+.highcharts-navigator-mask-inside {
+    fill: rgba(255, 205, 0, 0.3)
+}
+
+.highcharts-range-input text {
+    fill: #666666 !important;
+}
+
+.highcharts-button-pressed .highcharts-button-box {
+    fill:rgba(255, 205, 0, 0.3)
+}
